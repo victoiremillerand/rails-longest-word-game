@@ -1,0 +1,14 @@
+<h1>GamesController#new</h1>
+
+<ul class="list-inline">
+<% @letters.each do |letter| %>
+  <li class="bg-primary"> <%= letter %></li>
+  <% end %>
+</ul>
+
+<form action="/score">
+  <label for="word">What's the longest word you can find</label><br>
+  <input type="text" name="word">
+  <%= hidden_field_tag 'letters', @letters %>
+  <input type="submit" value="play!">
+</form>
